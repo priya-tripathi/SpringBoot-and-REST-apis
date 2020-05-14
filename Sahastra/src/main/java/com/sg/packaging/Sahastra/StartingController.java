@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class StartingController {
-	@GetMapping("/starting")
+	@GetMapping("/static/index")
 	public String starting(@RequestParam(name="name", 
 	required=false, defaultValue="Priya")String name, Model model) {
 		model.addAttribute("name", name);
-		return "starting";
+		return "index";
 		
 	}
 }
